@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="container">
+<div class="row">
+    <!-- <div class="col-md-12"> -->
+        <div>
+        <h1 align="center" style="background-color: aqua;">Welcome</h1>
+        </div>
+    </div>
+    <!-- <div class="row"> -->
+        <div>
+        <!-- <div class="col-md-3"> -->
+            <div>
+            </div>
+        </div
+        <!-- <div class="col-md-6" align="center"> -->
+            <div align= "center">
+            <label>Name:</label>
+            <input type="text"id="Name" placeholder="Enter Your Name">
+            <br>
+            <br>
+            <label>Age:</label>
+            <input type="number"id="Age" placeholder="Enter Your Age">
+            <br>
+            <br>
+            <button onclick="Agree()">Agree</button>
+            <button onclick="Disagree">Disagree</button>
+
+        </div>
+    </div>
+    <!-- <div class="col-md-3"> -->
+        <div>
+           
+    </div>
+</div>
+<!-- <div class="col-md-12"> -->
+    <div>
+    <h1 id="h1"></h1>
+    <h1 id="h2"></h1>
+ </div>          
+</div>
+</div>
+<script>
+     function Agree(){
+        let x= document.getElementById("Name").value;
+        let y= document.getElementById("h1").ineerHTML;
+        document.getElementById("h1").innerHTML="Welcome Mr."+ " " + x;
+        
+        let z= document.getElementById("Age").value;
+        let a= document.getElementById("h2").ineerHTML;
+        document.getElementById("h2").innerHTML="You are "+ " " + z+" "+ "Year Old";
+     }
+     function Disagree(){
+       document.getElementById("Name").value= "";
+       document.getElementById("Age").value= "";
+        
+     }
+
+    </script>
+</body>
+</html>

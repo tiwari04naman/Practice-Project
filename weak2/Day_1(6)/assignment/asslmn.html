@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day=6 Assignment</title>
+</head>
+<body>
+    <div class="container">
+        <div style="background-color: rgb(131, 200, 74);"> 
+            <h1 id="h1">Welcome</h1>
+        </div>
+        
+        <div>
+            <label for="name"><b>Name :</b></label>
+            <input type="text" id="name"> 
+            <br>
+            <br>
+            <label for="age"><b>Age :</b></label>
+            <input type="number" id="age"> 
+            <br>
+            <br>
+            <button onclick="Agree()" id="agree">Agree</button>
+            <button onclick="Disagree()" id="disagree">Disagree</button>
+        </div>
+        <div id="result">
+              <h1 id="name_h2"></h1>
+              <h1 id="age_h2"></h1>
+              
+        </div>
+                     
+
+</div>
+    <script>
+        function Agree() {
+            // these two line sets the CSS property
+            document.getElementById("result").style.border = " 2px solid blue";
+            document.getElementById("result").style.marginTop = "50px";
+    // these  lines show the result
+            let name = document.getElementById('name').value;
+            let age = document.getElementById('age').value;
+            document.getElementById('name_h2').innerHTML = "Welcome Mr./Mrs. " + name;
+            document.getElementById('age_h2').innerHTML = "You are " + age + " Years Old.";
+        }
+
+        function Disagree(){
+            document.getElementById('name').value="";
+            document.getElementById('age').value="";
+        }
+
+    </script>
+</body>
+</html>

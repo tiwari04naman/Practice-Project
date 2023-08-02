@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day=6 Assignment</title>
+    <style>
+       
+        .container {
+            margin: 100px auto;
+            padding: 20px;
+            border: 3px solid #076a05;
+            text-align: center;
+            background-color: rgb(217, 225, 225);
+        }
+        #agree{
+            margin-right: 100px;
+            background-color:#bcca18;;
+            
+        }
+        #agree:hover{
+            background-color: rgba(74, 34, 28, 0.947);
+
+        }
+        #disagree{
+            background-color: #8d3838;
+            
+        }
+        #disagree:hover{
+            background-color: rgb(255, 0, 221);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="background-color: rgb(193, 74, 200);"> 
+            <h1 id="h1">Welcome</h1>
+        </div>
+        
+        <div>
+            <label for="name"><b>Name :</b></label>
+            <input type="text" id="name" placeholder="Enter your name"><br><br>
+            <label for="age"><b>Age :</b></label>
+            <input type="number" id="age" placeholder="Enter your age"><br><br>
+            <button onclick="Agree()" id="agree">Agree</button>
+            <button onclick="Disagree()" id="disagree">Disagree</button>
+        </div>
+        <div id="result">
+              <h2 id="name_h2"></h2>
+              <h2 id="age_h2"></h2>
+        </div>
+                     
+
+</div>
+    <script>
+        function Agree() {
+            // these two line sets the CSS property
+            
+            document.getElementById("result").style.marginTop = "50px";
+    // these  lines show the result
+            let name = document.getElementById('name').value;
+            let age = document.getElementById('age').value;
+            document.getElementById('name_h2').innerHTML = "Welcome Mr./Mrs. " + name;
+            document.getElementById('age_h2').innerHTML = "You are " + age + " years old.";
+        }
+
+        function Disagree(){
+            document.getElementById('name').value="";
+            document.getElementById('age').value="";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day-6 Assignment</title>
+    <style>
+       
+        .container {
+            margin: 100px auto;
+            padding: 20px;
+            border: 3px solid #101210;
+            text-align: center;
+            background-color: rgb(25, 215, 215);
+        }
+        #agree{
+            margin-right: 100px;
+            background-color:#939485;;
+            
+        }
+        #agree:hover{
+            background-color: rgba(160, 153, 221, 0.947);
+
+        }
+        #disagree{
+            background-color: #deadad;
+            
+        }
+        #disagree:hover{
+            background-color: rgb(232, 10, 202);
+        }
+    </style>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+    <script src="https://kit.fontawesome.com/02bc95fce2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <!-- Nabbar -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-info" >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../../../Bootstrap/portfolio.html"><img class="ms-4 me-4 "  src="../../../Bootstrap/np.png" height="50px"></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../../Personal/index.html">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Weakly Task
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../../../Bootstrap/Weak1.html">Weak-1</a></li>
+                      <li><a class="dropdown-item" href="../../../Bootstrap/Weak2.html">Weak-2</a></li>
+                      <li><a class="dropdown-item" href="../../../Bootstrap/Weak3.html">Weak-3</a></li>
+                      <li><a class="dropdown-item" href="../../../Bootstrap/Weak4.html">Weak-4</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../../Bootstrap/contact.html">Contact Us</a>
+                    
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../../Bootstrap/portfolio.html">Traning Portfolio</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-success" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+        </nav>
+
+    <div class="container">
+        <div style="background-color: rgb(226, 10, 238);"> 
+            <h1 id="h1">Welcome</h1>
+        </div>
+        
+        <div>
+            <label for="name"><b>Name :</b></label>
+            <input type="text" id="name" placeholder="Enter your name"><br><br>
+            <label for="age"><b>Age :</b></label>
+            <input type="number" id="age" placeholder="Enter your age"><br><br>
+            <button onclick="Agree()" id="agree">Agree</button>
+            <button onclick="Disagree()" id="disagree">Disagree</button>
+        </div>
+        <div id="result">
+              <h2 id="name_h2"></h2>
+              <h2 id="age_h2"></h2>
+        </div>
+                     
+
+</div>
+    <script>
+        function Agree() {
+            // these two line sets the CSS property
+            document.getElementById("result").style.border = " 2px solid blue";
+            document.getElementById("result").style.marginTop = "50px";
+    // these  lines show the result
+            let name = document.getElementById('name').value;
+            let age = document.getElementById('age').value;
+            document.getElementById('name_h2').innerHTML = "Welcome Mr./Mrs. " + name;
+            document.getElementById('age_h2').innerHTML = "You are " + age + " years old.";
+        }
+
+        function Disagree(){
+            document.getElementById('name').value="";
+            document.getElementById('age').value="";
+        }
+
+    </script>
+
+         <!-- Footer -->
+         <div class=" m-5 p-5 ">
+            <!-- Footer -->
+            <footer class="text-center text-lg-start  text-muted mt-5">
+                <!-- Section: Social media -->
+                <section class="d-flex justify-content-center justify-content-lg-between ">
+                    <!-- Left -->
+                    <div class="me-5 d-none d-lg-block ">
+                        <span>Get connected with us on social networks:</span>
+                    </div>
+                    <!-- Left -->
+        
+                    <!-- Right -->
+                    <div class="">
+                        <a href="https://www.facebook.com/" class="me-4 text-reset"><i class="fa-brands fa-facebook-f  fa-2xl" style="color: #000000;"></i></a>
+                        <a href="https://twitter.com" class="me-4 text-reset"><i class="fa-brands fa-twitter  fa-2xl" style="color: #000000;"></i></a>
+                        <a href="https://www.instagram.com/" class="me-4 text-reset"><i class="fa-brands fa-instagram  fa-2xl" style="color: #000000;"></i></a>
+                        
+                        <a href="https://linkedin.com/in/naman-tiwari-977507207" class="me-4 text-reset"><i class="fa-brands fa-linkedin  fa-2xl" style="color: #000000;"></i></a>
+                        <a href="https://github.com/tiwari04naman " class="me-4 text-reset"><i class="fa-brands fa-github  fa-2xl" style="color: #000000;"></i></a>
+                    </div>
+                    <!-- Right -->
+                </section>
+                <!-- Section: Social media -->
+        
+        
+                <!-- Copyright -->
+                <div class="text-center mt-5" >
+                  © 2023 Copyright:@Naman
+                    
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <!-- Footer -->
+        
+        </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+    <div class="col-12">
+      <input type="text" id="input">
+    </div>
+    <form name = "form1"><br>
+        <div>
+        <div class="row">
+            <div class="col-4">
+    <input type = "button" value = "9" onclick = "form1.answer.value += '1' ">  
+    <input type = "button" value = "8" onclick = "form1.answer.value += '2' ">  
+    <input type = "button" value = "7" onclick = "form1.answer.value += '3' ">
+    <input type = "button" value = "=" onclick = "form1.answer.value += '+' ">  
+      
+      </div> 
+      <div> 
+      <div class="row">
+      <div class="col-4"> 
+      <input type = "button" value = "6" onclick = "form1.answer.value += '4' ">  
+      <input type = "button" value = "5" onclick = "form1.answer.value += '5' ">  
+      <input type = "button" value = "4" onclick = "form1.answer.value += '6' ">  
+      <input type = "button" value = "*" onclick = "form1.answer.value += '-' ">  
+      </div>
+      <div>
+        <div class="row">
+            <div class="col-4">  
+        
+      <input type = "button" value = "3" onclick = "form1.answer.value += '7' ">  
+      <input type = "button" value = "2" onclick = "form1.answer.value += '8' ">  
+      <input type = "button" value = "1" onclick = "form1.answer.value += '9' ">  
+      <input type = "button" value = "/" onclick = "form1.answer.value += '*' ">  
+      </div>
+      <div>
+        <div class="row">
+            <div class="col-4">  
+        
+        
+      <input type = "button" value = "0" onclick = "form1.answer.value += '/' ">  
+      <input type = "button" value = "+" onclick = "form1.answer.value += '0' ">  
+        <input type = "button" value = "-" onclick = "form1.answer.value += '.' ">  
+        <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->  
+      <input type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) "><br>  
+      <br>
+
+
+
+      <script>
+        var st="";//global variable
+        function click1(a){
+          st=st+a;
+          document.getElementById('t1').value=st;
+        }
+        function equal(){
+          st=eval(st);
+          document.getElementById('t1').value=st;
+
+        }
+        function clear1(){
+          st="";
+          document.getElementById('t1').value=st;
+
+        }
+        function clear12{
+          st=st.slice(0,st.length-1);
+          document.getElementById('t1').value=st;
+
+        }
+        </script>
+
+
+    <!-- <script>
+        function append(number) {
+            document.getElementById('result').value += number;
+        }
+
+        function calculateResult() {
+            let expression = document.getElementById('result').value;
+            let result = eval(expression);
+            document.getElementById('result').value = result;
+        }
+
+        function clearInput() {
+            document.getElementById('result').value = '';
+        }
+    </script> -->
